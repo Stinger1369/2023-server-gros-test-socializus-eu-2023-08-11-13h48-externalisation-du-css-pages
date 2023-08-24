@@ -1,0 +1,313 @@
+
+ <View style={[styles.row, { marginVertical: 15 }]}>
+          {/* <CheckboxSquare title={"50% Guys 50% Girls"} state={state} setState={setState}/>
+          <CheckboxSquare title={"Girls only"} state={state} setState={setState}/>
+          <CheckboxSquare title={"Guys only"} state={state} setState={setState}/> */}
+          <CheckboxSquare
+            title={createActivity.step4.b2022_friendsOnly}
+            state={friendsOnly}
+            setState={setFriendsOnly}
+          />
+          <CheckboxSquare
+            title={createActivity.step4.select}
+            state={selectPeople}
+            setState={setSelectPeople}
+          />
+          <CheckboxSquare
+            title={createActivity.step4.b2022_phoneNumberVisible}
+            state={allowPhoneNumberDisplay}
+            setState={setAllowPhoneNumberDisplay}
+          />
+          {/* <CheckboxSquare title={createActivity.step4.allow} state={allowCoOrg} setState={setAllowCoOrg}/> */}
+        </View>
+
+        <InputField
+          title={createActivity.step4.b2022_infoLine}
+          state={infoLine}
+          setState={setInfoLine}
+        />
+
+        {/* <View style={styles.switchRow}>
+          <Text style={[styles.boldTitle, { color: "#1E7354" }]}>
+            {createActivity.step4.b2022_repeatEvent}
+          </Text>
+          <SwitchBtn state={repeatEvent} setState={setRepeatEvent} />
+        </View>
+
+         {repeatEvent && (
+          <>
+            <View style={styles.timeDataContainer}>
+              <TouchableOpacity
+                onPress={() => setRepeatEventFrequency(createActivity.step4.b2022_weekly)}
+                style={
+                  repeatEventFrequency === createActivity.step4.b2022_weekly
+                    ? [
+                        styles.timePickView,
+                        {
+                          backgroundColor: "#59c09b",
+                          borderBottomLeftRadius: 15,
+                          borderTopLeftRadius: 15,
+                        },
+                      ]
+                    : styles.timePickView
+                }
+              >
+                <Text
+                  style={
+                    repeatEventFrequency === createActivity.step4.b2022_weekly
+                      ? [styles.boldTitleSecondary, { color: "white" }]
+                      : [styles.boldTitleSecondary, { color: "black" }]
+                  }
+                >
+                  {createActivity.step4.b2022_weekly}
+                </Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => setRepeatEventFrequency(createActivity.step4.b2022_monthly)}
+                style={
+                  repeatEventFrequency === createActivity.step4.b2022_monthly
+                    ? [
+                        styles.timePickView,
+                        styles.middle,
+                        { backgroundColor: "#59c09b" },
+                      ]
+                    : [styles.timePickView, styles.middle, { height: 40 }]
+                }
+              >
+                <Text
+                  style={
+                    repeatEventFrequency === createActivity.step4.b2022_monthly
+                      ? [styles.boldTitleSecondary, { color: "white" }]
+                      : [styles.boldTitleSecondary, { color: "black" }]
+                  }
+                >
+                  {createActivity.step4.b2022_monthly}
+                </Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => setRepeatEventFrequency(createActivity.step4.b2022_yearly)}
+                style={
+                  repeatEventFrequency === createActivity.step4.b2022_yearly
+                    ? [
+                        styles.timePickView,
+                        {
+                          backgroundColor: "#59c09b",
+                          borderBottomRightRadius: 15,
+                          borderTopRightRadius: 15,
+                        },
+                      ]
+                    : styles.timePickView
+                }
+              >
+                <Text
+                  style={
+                    repeatEventFrequency === createActivity.step4.b2022_yearly
+                      ? [styles.boldTitleSecondary, { color: "white" }]
+                      : [styles.boldTitleSecondary, { color: "black" }]
+                  }
+                >
+                  {createActivity.step4.b2022_yearly}
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <Text style={styles.boldTitle}>{createActivity.step4.b2022_selectDays}</Text>
+            <View
+              style={[
+                styles.row,
+                { marginVertical: 10, justifyContent: "center" },
+              ]}
+            >
+              <TouchableOpacity
+                style={
+                  repeatEventDays.includes(createActivity.step4.b2022_monday)
+                    ? [styles.styledInputDay, { backgroundColor: "#59c09d" }]
+                    : styles.styledInputDay
+                }
+                onPress={() => manageFrequencyDays(createActivity.step4.b2022_monday)}
+              >
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    color: repeatEventDays.includes(createActivity.step4.b2022_monday)
+                      ? "white"
+                      : "black",
+                  }}
+                >
+                  {createActivity.step4.b2022_monday}
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={
+                  repeatEventDays.includes(createActivity.step4.b2022_tuesday)
+                    ? [styles.styledInputDay, { backgroundColor: "#59c09d" }]
+                    : styles.styledInputDay
+                }
+                onPress={() => manageFrequencyDays(createActivity.step4.b2022_tuesday)}
+              >
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    color: repeatEventDays.includes(createActivity.step4.b2022_tuesday)
+                      ? "white"
+                      : "black",
+                  }}
+                >
+                  {createActivity.step4.b2022_tuesday}
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={
+                  repeatEventDays.includes(createActivity.step4.b2022_wednesday)
+                    ? [styles.styledInputDay, { backgroundColor: "#59c09d" }]
+                    : styles.styledInputDay
+                }
+                onPress={() => manageFrequencyDays(createActivity.step4.b2022_wednesday)}
+              >
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    color: repeatEventDays.includes(createActivity.step4.b2022_wednesday)
+                      ? "white"
+                      : "black",
+                  }}
+                >
+                  {createActivity.step4.b2022_wednesday}
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={
+                  repeatEventDays.includes(createActivity.step4.b2022_thursday)
+                    ? [styles.styledInputDay, { backgroundColor: "#59c09d" }]
+                    : styles.styledInputDay
+                }
+                onPress={() => manageFrequencyDays(createActivity.step4.b2022_thursday)}
+              >
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    color: repeatEventDays.includes(createActivity.step4.b2022_thursday)
+                      ? "white"
+                      : "black",
+                  }}
+                >
+                  {createActivity.step4.b2022_thursday}
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={
+                  repeatEventDays.includes(createActivity.step4.b2022_friday)
+                    ? [styles.styledInputDay, { backgroundColor: "#59c09d" }]
+                    : styles.styledInputDay
+                }
+                onPress={() => manageFrequencyDays(createActivity.step4.b2022_friday)}
+              >
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    color: repeatEventDays.includes(createActivity.step4.b2022_friday)
+                      ? "white"
+                      : "black",
+                  }}
+                >
+                  {createActivity.step4.b2022_friday}
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={
+                  repeatEventDays.includes(createActivity.step4.b2022_saturday)
+                    ? [styles.styledInputDay, { backgroundColor: "#59c09d" }]
+                    : styles.styledInputDay
+                }
+                onPress={() => manageFrequencyDays(createActivity.step4.b2022_saturday)}
+              >
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    color: repeatEventDays.includes(createActivity.step4.b2022_saturday)
+                      ? "white"
+                      : "black",
+                  }}
+                >
+                  {createActivity.step4.b2022_saturday}
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={
+                  repeatEventDays.includes(createActivity.step4.b2022_sunday)
+                    ? [styles.styledInputDay, { backgroundColor: "#59c09d" }]
+                    : styles.styledInputDay
+                }
+                onPress={() => manageFrequencyDays(createActivity.step4.b2022_sunday)}
+              >
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    color: repeatEventDays.includes(createActivity.step4.b2022_sunday)
+                      ? "white"
+                      : "black",
+                  }}
+                >
+                  {createActivity.step4.b2022_sunday}
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <DateField
+              title={"Repeat until: "}
+              state={repeatEventEndDate}
+              setState={setRepeatEventEndDate}
+            /> 
+          </>
+        )}  */}
+
+        <View style={styles.switchRow}>
+          <Text style={[styles.boldTitle, { color: "#1E7354" }]}>
+            {createActivity.step4.b2022_parity}
+          </Text>
+          <SwitchBtn state={parity} setState={setParity} />
+        </View>
+
+        {parity && (
+          <View style={styles.fields}>
+            <ParitySlider state={parityValues} setState={setParityValues} />
+          </View>
+        )}
+
+        <View style={styles.switchRow}>
+          <Text style={[styles.boldTitle, { color: "#1E7354" }]}>
+            {createActivity.step4.b2022_allowGuests}
+          </Text>
+          <SwitchBtn state={allowGuests} setState={setAllowGuests} />
+        </View>
+
+        {allowGuests && (
+          <View>
+            <OneValueSlider
+              minVal={1}
+              maxVal={5}
+              state={howManyGuests}
+              setState={setHowManyGuests}
+            />
+          </View>
+        )}
+
+        <View style={styles.switchRow}>
+          <Text style={[styles.boldTitle, { color: "#1E7354" }]}>
+            {createActivity.step4.b2022_ageRestrict}
+          </Text>
+          <SwitchBtn state={ageRestriction} setState={setAgeRestriction} />
+        </View>
+
+        {ageRestriction && (
+          <View>
+            <TwoValuesSlider
+              minVal={18}
+              maxVal={99}
+              state={ages}
+              setState={setAges}
+            />
+          </View>
+        )}

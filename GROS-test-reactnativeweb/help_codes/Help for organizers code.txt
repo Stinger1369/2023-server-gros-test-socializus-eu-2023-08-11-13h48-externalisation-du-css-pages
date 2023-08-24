@@ -1,0 +1,249 @@
+<View style={styles.switchRow}>
+          <Text style={styles.boldTitle}>
+            {/*🇫🇷 La variable createActivity.step1.b2022_helpOrganizers définit l'affichage en "Help for organizers".
+                  🇬🇧 The variable createActivity.step1.b2022_helpOrganizers displays "Help for organizers"*/}
+            {createActivity.step1.b2022_helpOrganizers}
+          </Text>
+          <SwitchBtn
+            state={helpForOrganizers}
+            setState={setHelpForOrganizers}
+          />
+        </View>
+        <View style={styles.fields}>
+          {helpForOrganizers && (
+            <>
+              <View style={styles.switchRow}>
+                <Text style={styles.boldTitle}>
+                  {/*🇫🇷 La variable createActivity.step1.b2022_helpOrganizers définit l'affichage en "".
+                  🇬🇧 The variable createActivity.step1.b2022_helpOrganizers displays "Change my reminder name"*/}
+                  {createActivity.step1.b2022_reminderName}
+                </Text>
+                {/*"b2022_reminderName": "Change my reminder name"*/}
+                <TouchableOpacity style={{ marginLeft: 5 }}>
+                  <Icon
+                    name="help-circle"
+                    type="ionicons"
+                    color={"black"}
+                    size={22}
+                  />
+                </TouchableOpacity>
+                <SwitchBtn
+                  state={hasReminderName}
+                  setState={setHasReminderName}
+                />
+              </View>
+
+              {hasReminderName && (
+                <View>
+                  <InputField
+                    title={"Reminder Name"}
+                    state={reminderName}
+                    setState={setReminderName}
+                  />
+                </View>
+              )}
+
+              <View style={styles.switchRow}>
+                <Text style={styles.boldTitle}>
+                  {/*🇫🇷 La variable createActivity.step1.b2022_coOrganizerRequest définit l'affichage en "".
+                  🇬🇧 The variable createActivity.step1.b2022_coOrganizerRequest displays "Request Co-organizers"*/}
+                  {createActivity.step1.b2022_coOrganizerRequest}
+                </Text>
+                <SwitchBtn
+                  state={requestCoOrganizers}
+                  setState={setRequestCoOrganizers}
+                />
+              </View>
+
+              {requestCoOrganizers && (
+                <>
+                  <View style={styles.fields}>
+                    <Text style={{ fontWeight: "bold", fontSize: 16 }}>
+                      {/*🇫🇷 La variable createActivity.step1.b2022_coOrganizerRequest définit l'affichage en "".
+                    🇬🇧 The variable createActivity.step1.b2022_coOrganizerRequestChoice displays "Choose Co-organizers request:"*/}
+                      {createActivity.step1.b2022_coOrganizerRequestChoice}
+                    </Text>
+                  </View>
+
+                  <View style={styles.coOrganizersOptions}>
+                    <TouchableOpacity
+                      style={[
+                        styles.coOrganizerCard,
+                        { backgroundColor: "#59c09b" },
+                      ]}
+                      disabled={true}
+                    >
+                      <View style={styles.coOrganizerIcon}>
+                        <Icon
+                          name="mail"
+                          type="ionicons"
+                          color="#59c09b"
+                          size={28}
+                        />
+                      </View>
+                      <Text
+                        style={{
+                          textAlign: "center",
+                          fontWeight: "bold",
+                          color: "white",
+                        }}
+                      >
+                        {/*🇫🇷 La variable createActivity.step1.b2022_coOrganizerMessage définit l'affichage en "".
+                     🇬🇧 The variable createActivity.step1.b2022_coOrganizerMessage displays "Receive private message"*/}
+                        {createActivity.step1.b2022_coOrganizerMessage}
+                      </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      onPress={() =>
+                        manageCoOrganizerRequests(
+                          "Come 5 min earlier to the activity"
+                        )
+                      }
+                      style={[
+                        styles.coOrganizerCard,
+                        {
+                          backgroundColor: coOrganizerRequests.includes(
+                            "Come 5 min earlier to the activity"
+                          )
+                            ? "#59c09b"
+                            : "#E6E6E6",
+                        },
+                      ]}
+                    >
+                      <View style={styles.coOrganizerIcon}>
+                        <Icon
+                          name="alarm"
+                          type="ionicons"
+                          color="#59c09b"
+                          size={28}
+                        />
+                      </View>
+                      <Text
+                        style={{
+                          textAlign: "center",
+                          fontWeight: "bold",
+                          color: coOrganizerRequests.includes(
+                            "Come 5 min earlier to the activity"
+                          )
+                            ? "white"
+                            : "black",
+                        }}
+                      >
+                        {/*🇫🇷 La variable createActivity.step1.b2022_coOrganizerRequestEarly définit l'affichage en "".
+                     🇬🇧 The variable createActivity.step1.b2022_coOrganizerRequestEarly displays "Come 5 minutes earlier to the activity"*/}
+                        {createActivity.step1.b2022_coOrganizerRequestEarly}
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+
+                  <View style={styles.fields}>
+                    <Text style={{ fontWeight: "bold", fontSize: 16 }}>
+                      {/*🇫🇷 La variable createActivity.step1.b2022_coOrganizerMyOffer définit l'affichage en "".
+                    🇬🇧 The variable createActivity.step1.b2022_coOrganizerMyOffer displays "I want to offer:"*/}
+                      {createActivity.step1.b2022_coOrganizerMyOffer}
+                    </Text>
+                  </View>
+
+                  <View style={styles.coOrganizersOptions}>
+                    <TouchableOpacity
+                      disabled={true}
+                      onPress={() => manageCoOrganizerOffers("A free drink")}
+                      style={[
+                        styles.coOrganizerCard,
+                        { backgroundColor: "#59c09b" },
+                      ]}
+                    >
+                      <View style={styles.coOrganizerIcon}>
+                        <img src={DrinkIcon} width={30} height={30} />
+                      </View>
+                      <Text
+                        style={{
+                          textAlign: "center",
+                          fontWeight: "bold",
+                          color: "white",
+                        }}
+                      >
+                        {/*🇫🇷 La variable createActivity.step1.b2022_coOrganizerOfferDrink définit l'affichage en "".
+                      🇬🇧 The variable createActivity.step1.b2022_coOrganizerOfferDrink displays "I want to offer:"*/}
+                        {createActivity.step1.b2022_coOrganizerOfferDrink}
+                      </Text>
+                      {/*A free drink*/}
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      onPress={() => manageCoOrganizerOffers("A free pass")}
+                      style={[
+                        styles.coOrganizerCard,
+                        {
+                          backgroundColor: coOrganizerOffers.includes(
+                            "A free pass"
+                          )
+                            ? "#59c09b"
+                            : "#E6E6E6",
+                        },
+                      ]}
+                    >
+                      <View style={styles.coOrganizerIcon}>
+                        <img src={TicketIcon} width={34} height={34} />
+                      </View>
+                      <Text
+                        style={{
+                          textAlign: "center",
+                          fontWeight: "bold",
+                          color: coOrganizerOffers.includes("A free pass")
+                            ? "white"
+                            : "black",
+                        }}
+                      >
+                        {createActivity.step1.b2022_coOrganizerOfferPass}
+                      </Text>
+                      {/*A free pass*/}
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      onPress={() => manageCoOrganizerOffers("Other gift")}
+                      style={[
+                        styles.coOrganizerCard,
+                        {
+                          backgroundColor: coOrganizerOffers.includes(
+                            "Other gift"
+                          )
+                            ? "#59c09b"
+                            : "#E6E6E6",
+                        },
+                      ]}
+                    >
+                      <View style={styles.coOrganizerIcon}>
+                        <img src={GiftIcon} width={30} height={30} />
+                      </View>
+                      <Text
+                        style={{
+                          textAlign: "center",
+                          fontWeight: "bold",
+                          color: coOrganizerOffers.includes("Other gift")
+                            ? "white"
+                            : "black",
+                        }}
+                      >
+                        {createActivity.step1.b2022_coOrganizerOfferGift}
+                      </Text>
+                      {/*Other gift*/}
+                    </TouchableOpacity>
+                  </View>
+
+                  {coOrganizerOffers.includes("Other gift") && (
+                    <View style={styles.fields}>
+                      <InputField
+                        title={createActivity.step1.b2022_coOrganizerGiftName}
+                        state={coOrganizerGift}
+                        setState={setCoOrganizerGift}
+                      />
+                      {/*What will you offer?*/}
+                    </View>
+                  )}
+                </>
+              )}
+            </>
+          )}
+        </View>

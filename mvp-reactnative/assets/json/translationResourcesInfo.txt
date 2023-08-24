@@ -1,0 +1,8 @@
+Toutes les variables de texte utilisées dans l'application sont stockés dans un fichier JSON. Celui-ci est copié
+pour chaque langue et seul le contenu de ses variables change.
+
+            "login": "Log in"       "login": "Se connecter"
+            en.json                 fr.json
+
+Les fichiers JSON sont disponibles, on peut voir le contenu du fichier JSON importé, mais il faudrait tous 
+les importer dans un fichier à part qui sert de liste, et déclarer le fichier souhaité.  

@@ -1,0 +1,76 @@
+                <View style={styles.organizerOptions}>
+                  <Text
+                    style={{
+                      marginVertical: 20,
+                      fontSize: 15,
+                      position: "relative",
+                    }}
+                  >
+                    {/*🇫🇷 La variable activity.t2022_UnapproveLis dans fr.json permet d'afficher "Liste non approuvé -"*/}
+                    {/*🇬🇧 The en.json variable activity.t2022_UnapproveLis displays "Unapproved List -"*/}
+                    {activity.t2022_UnapprovedList} (10)
+                  </Text>
+                  <Text
+                    style={{
+                      color: "#bbb",
+                      position: "absolute",
+                      left: 15,
+                      bottom: 4,
+                    }}
+                  >
+                    (Secret List)
+                  </Text>
+                  <TouchableOpacity
+                    style={{ flexDirection: "row", alignItems: "center" }}
+                  >
+                    <Text style={{ fontWeight: "bold", marginRight: 5 }}>
+                      {/*🇫🇷 La variable activity.t20228SeeAll dans fr.json permet d'afficher "Tout voir"*/}
+                      {/*🇬🇧 The en.json variable activity.t20228SeeAll displays "See all"*/}
+                      {activity.t2022_SeeAll}
+                    </Text>
+                    <Icon
+                      name="chevron-right"
+                      type="font-awesome"
+                      size={16}
+                      color="black"
+                    />
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.organizerOptions}>
+                  <Text
+                    style={{
+                      marginVertical: 20,
+                      fontSize: 15,
+                      position: "relative",
+                    }}
+                  >
+                    {/*🇫🇷 La variable activity.t2022Co_OrganiserWL dans fr.json permet d'afficher "Liste d'attente des co-organisers"*/}
+                    {/*🇬🇧 The en.json variable activity.t2022Co_OrganiserWL displays "Co-organisers waiting list -"*/}
+                    {activity.t2022Co_OrganiserWL} (10)
+                  </Text>
+                  <Text
+                    style={{
+                      color: "#bbb",
+                      position: "absolute",
+                      left: 15,
+                      bottom: 4,
+                    }}
+                  >
+                    (Secret List)
+                  </Text>
+                  <TouchableOpacity
+                    style={{ flexDirection: "row", alignItems: "center" }}
+                  >
+                    <Text style={{ fontWeight: "bold", marginRight: 5 }}>
+                      {/*🇫🇷 La variable activity.t2022_SeeAll dans fr.json permet d'afficher "Tout voir"*/}
+                      {/*🇬🇧 The en.json variable activity.t2022_SeeAll displays "See all"*/}
+                      {activity.t2022_SeeAll}
+                    </Text>
+                    <Icon
+                      name="chevron-right"
+                      type="font-awesome"
+                      size={16}
+                      color="black"
+                    />
+                  </TouchableOpacity>
+                </View>

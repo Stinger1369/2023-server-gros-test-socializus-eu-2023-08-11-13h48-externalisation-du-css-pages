@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Socializus",
+    "slug": "Socializus",
+    "description": "Faire des rencontres amicales, s’amuser et parler à tout le monde, de tout, et dans toutes les langues, c’est toujours plus simple avec une application qui traduit tout automatiquement. La barrière de la langues n’existe plus, il est temps de se retrouver pour profiter d’une vie sociale inoubliable.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/Logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Logo.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/Logo.png",
+      "build": {
+        "babel": {
+          "include": ["@ptomasroos/react-native-multi-slider"]
+        }
+      }
+    },
+    "packagerOpts": {
+      "config": "metro.config.js"
+    }
+  }
+}

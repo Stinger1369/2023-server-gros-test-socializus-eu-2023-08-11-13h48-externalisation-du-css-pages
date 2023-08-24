@@ -1,0 +1,49 @@
+{display === 3 && (
+            <View style={{ height: "100%" }}>
+              <Text
+                style={{
+                  marginVertical: 15,
+                  textAlign: "center",
+                  fontSize: 20,
+                  fontWeight: "bold",
+                }}
+              >
+                {/*🇫🇷 La variable activity.t2022_ChatSettings dans fr.json permet d'afficher "Paramètre du chat"*/}
+                {/*🇬🇧 The en.json variable activity.t2022_ChatSettings displays "Chat Settings""*/}
+                {activity.t2022_ChatSettings}
+              </Text>
+              <View style={styles.chatSetting}>
+                <Text style={{ fontSize: 15 }}>
+                  {/*🇫🇷 La variable activity.t2022_NotificationGroupChat dans fr.json permet d'afficher "Activer les notifications dans le chat de groupe"*/}
+                  {/*🇬🇧 The en.json variable activity.t2022_NotificationGroupChat displays "Allow notifications in this chat group""*/}
+                  {activity.t2022_NotificationGroupChat}
+                </Text>
+                <SwitchBtn
+                  state={allowNotifications}
+                  setState={setAllowNotifications}
+                />
+              </View>
+              <View style={styles.chatSetting}>
+                <Text style={{ fontSize: 15 }}>
+                  {/*🇫🇷 La variable activity.t2022_NotificationJoin dans fr.json permet d'afficher "Notification si quelqu'un rejoins le chat"*/}
+                  {/*🇬🇧 The en.json variable activity.t2022_NotificationJoin displays "Notification when someone joins in""*/}
+                  {activity.t2022_NotificationJoin}
+                </Text>
+                <SwitchBtn
+                  state={joinInNotification}
+                  setState={setJoinInNotification}
+                />
+              </View>
+              <View style={styles.chatSetting}>
+                <Text style={{ fontSize: 15 }}>
+                  {/*🇫🇷 La variable activity.t2022_NotificationWithSound dans fr.json permet d'afficher "Notification avec du son"*/}
+                  {/*🇬🇧 The en.json variable activity.t2022_NotificationWithSound displays "Notification with sound""*/}
+                  {activity.t2022_NotificationWithSound}
+                </Text>
+                <SwitchBtn
+                  state={notificationSound}
+                  setState={setNotificationSound}
+                />
+              </View>
+            </View>
+          )}

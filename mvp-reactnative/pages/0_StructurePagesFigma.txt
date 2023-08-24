@@ -1,0 +1,4 @@
+Click the link below to see the links between Figma frames and pages in VS Code 
+Tout est expliqué en dessous pour le lien entre une page figma et la page VS code
+https://docs.google.com/spreadsheets/d/1yXlKz3KJGb5ViZgfkuwoE9pvdb-7pDeHPDXz0Mtvv9A/edit#gid=0
+

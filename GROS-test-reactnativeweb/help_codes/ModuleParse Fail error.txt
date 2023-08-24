@@ -1,0 +1,18 @@
+Si vous téléchargez un package, mais que lors de son utilisation, il y a cette erreur:
+__________________________________________________________________
+./node_modules/nom-du-package/nom-du-fichier.js 
+
+Module parse failed: Unexpected token
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders  
+| 
+| //code
+>   static defaultProps = {
+| //code  
+___________________________________________________________________
+
+Ajoutez le nom du package où l'erreur a été localisée dans l'array de la ligne 31."
+
+29|   "web": {
+30|      "favicon": "./assets/favicon.png",
+31|      "build": { "babel": { "include": [ "@ptomasroos/react-native-multi-slider", ***Ajouter     ici*** ] }}
+32|    },

@@ -1,0 +1,41 @@
+------------------------------------ FR ------------------------------------
+
+Hello,
+La page initiale de CreateActivityScreen étant trop longue 
+(comme évoqué dans le tout aussi long commentaire dans la page), j'ai décidé de
+séparer les différentes étapes dans le but de faire un code plus agréable à
+travailler et maintenir. Comme vous l'avez aussi sûrement constaté, le style
+des différentes pages est rassemblé dans le fichier CreateActivityStyle, 
+encore une fois pour faciliter les choses. J'y ai séparé les styles: il y a
+la partie dont les styles sont repris par plusieurs pages et d'autres qui sont
+spécifiques à une seule page. S'il y a un changement à faire, veillez à le faire
+à la bonne place, pour plus de lisibilité.
+
+A l'heure où j'écris ce texte, les pages ne sont pas encore totalement intégrées.
+Je n'ai pas encore fait les pages Step1 et Step3, ni fait en sorte que la base
+de donnée reçoive bien toutes les infos des différentes pages...j'espère y arriver
+avant de quitter le projet et, le cas échéant, vous donner la marche à suivre pour
+finir le travail tranquillement.
+
+------------------------------------ FR ------------------------------------
+
+
+
+------------------------------------ ENG -----------------------------------
+
+Hi,
+As the initial CreateActivityScreen page was too long
+(just as the long comment on the page also says), I decided to separate the
+different steps in order to make the code more pleasant to work with and maintain.
+As you propably also remarked, the style of the different pages were gathered
+in the file CreateActivityStyle, again to make things easier. I separated
+the styles there: there will be a part for styles that are shared between
+several pages and a part for specific pages. If there's a change to do,
+be sure to do it in the right place, for more visibility.
+
+At the moment I'm writing this text, the pages are not fully integrated yet.
+I haven't done Step1 and Step3 pages yet, and I didn't make so the database
+receives all the data from the different pages...I hope to achieve that before
+leaving the project and, if not, leave as many tips as I can to finish this job peacefully.
+
+------------------------------------ ENG -----------------------------------
