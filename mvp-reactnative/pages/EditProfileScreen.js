@@ -18,7 +18,7 @@ import { useNavigation } from "@react-navigation/native";
 // Composants
 import Fields, { CityField } from "../components/Fields";
 import TwinSelectButton from "../components/TwinSelectButton";
-import LogButton from "../components/LogButtons";
+//import LogButton from "../components/LogButtons";
 import EditBigSquare from "../components/EditBigSquare";
 import MultilineFields from "../components/MultilineFields";
 import SelectLanguage from "../components/SelectLanguage";
@@ -29,9 +29,9 @@ import ProfilePictureEdit from "../components/ProfilePictureComponent/ProfilePic
 import moment from "moment"; // biblioteque javasCript pour travailler avec la date
 
 // Assets
-import CameraSvg from "../assets/images/camera.svg";
-import Json from "../assets/json/en.json";
-import eventList from "../assets/json/activityList.json";
+//import CameraSvg from "../assets/images/camera.svg";
+//import Json from "../assets/json/en.json";
+//import eventList from "../assets/json/activityList.json";
 import LastNameIcon from "../assets/images/image_edit_profile/textFrame.svg";
 import MemberNumberIcon from "../assets/images/image_edit_profile/avatar.svg";
 import EmailIcon from "../assets/images/image_edit_profile/envelope.svg";
@@ -40,12 +40,12 @@ import BirthdayIcon from "../assets/images/birthday.svg";
 //connections
 import { hostname } from "../backendconnect/hostname.js";
 
-import { SvgUri } from "react-native-svg";
-import { CheckBox } from "@rneui/base";
+//import { SvgUri } from "react-native-svg";
+//import { CheckBox } from "@rneui/base";
 
 //import des flags Image qui se trouve dans les utils
 //import { flagsImage } from "../utils/flagImage";
-import { activitiesList } from "../assets/activityList/activityListWithIcons";
+//import { activitiesList } from "../assets/activityList/activityListWithIcons";
 import { CountriesGrid_SeveralFlags } from "../components/CountriesGrids";
 import {
 
