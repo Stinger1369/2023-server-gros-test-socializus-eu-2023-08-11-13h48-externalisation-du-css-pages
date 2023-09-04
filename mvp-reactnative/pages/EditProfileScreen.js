@@ -48,6 +48,7 @@ import { CheckBox } from "@rneui/base";
 import { activitiesList } from "../assets/activityList/activityListWithIcons";
 import { CountriesGrid_SeveralFlags } from "../components/CountriesGrids";
 import {
+
   CheckboxSquare,
   OptionButtonProfile,
 } from "../components/SelectionElements";
